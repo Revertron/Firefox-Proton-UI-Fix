@@ -2,6 +2,13 @@
   padding: 2px 8px !important;
 }
 
+/** Move tab context line from top to bottom (multi container color line) */
+.tab-context-line {
+  margin-top: 0px !important;
+  margin-left: -1px !important;
+  margin-right: -1px !important;
+}
+
 #tabbrowser-tabs {
   min-height: 32px !important;
 }
