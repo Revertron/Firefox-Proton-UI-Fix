@@ -1,0 +1,72 @@
+.tab-content {
+  padding: 2px 8px !important;
+}
+
+#tabbrowser-tabs {
+  min-height: 32px !important;
+}
+
+.tabbrowser-tab {
+  --tab-label-mask-size: 1em !important;
+  padding-inline: 0px !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+:root {
+  --tab-min-height: 36px !important;
+  --tab-border-radius: 0px !important;
+  --tab-shadow-max-size: 6px;
+  --proton-tab-block-margin: 0px !important;
+  --inline-tab-padding: 4px !important;
+}
+
+#TabsToolbar {
+  height: 36px !important;
+}
+
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
+  background-image: radial-gradient(circle, var(--attention-icon-color), var(--attention-icon-color) 2px, transparent 2px) !important;
+  background-position: center bottom calc(3.5px + var(--tabs-navbar-shadow-size)) !important;
+  background-size: 4px 4px;
+  background-repeat: no-repeat;
+}
+
+/** Fix menu monster padding */
+/* context menu padding */
+menupopup > menuitem,
+menupopup > menu {
+  padding-block: 0.15em !important;
+}
+menupopup > menuitem, menupopup > menu {
+    padding-inline-start: 0.6em;
+}
+
+/* menu item padding */
+toolbarbutton {
+  --arrowpanel-menuitem-border-radius: 0px;
+  --arrowpanel-menuitem-padding: 2px 10px;
+  --arrowpanel-menuitem-margin: 0px;
+}
+
+/** Menu top items border and padding */
+/* context menu top left button padding */
+menugroup > menuitem:first-child {  
+  padding-left: 10px;
+}
+/* context menu top right button padding */
+menugroup > menuitem:last-child {  
+  padding-right: 10px;
+}
+/* context menu top buttons padding */
+menugroup > menuitem {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+menugroup > menuitem > hbox > image {  
+  border-radius: 6px !important;
+}
+
+.menu-iconic > .menu-iconic-left, .menuitem-iconic > .menu-iconic-left {
+    padding-top: 0px !important;
+}
