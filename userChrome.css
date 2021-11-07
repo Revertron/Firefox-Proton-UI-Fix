@@ -2,6 +2,12 @@
   padding: 2px 8px !important;
 }
 
+.tab-background {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	box-shadow: 0 0 0px !important;
+}
+
 /** Move tab context line from top to bottom (multi container color line) */
 .tab-context-line {
   margin-top: 0px !important;
@@ -29,6 +35,7 @@
 
 #TabsToolbar {
   height: 36px !important;
+  --toolbarbutton-inner-padding: calc((var(--tab-min-height) - 24px) / 2);
 }
 
 .tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
