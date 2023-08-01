@@ -1,3 +1,5 @@
+/** https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html **/
+
 .tab-content {
   padding: 2px 8px !important;
 }
@@ -6,13 +8,15 @@
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
 	box-shadow: 0 0 0px !important;
+	border: 0px !important;
 }
 
 /** Move tab context line from top to bottom (multi container color line) */
 .tab-context-line {
   margin-top: 0px !important;
-  margin-left: -1px !important;
-  margin-right: -1px !important;
+  border-radius: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 #tabbrowser-tabs {
@@ -31,11 +35,16 @@
   --tab-shadow-max-size: 6px;
   --proton-tab-block-margin: 0px !important;
   --inline-tab-padding: 4px !important;
+  /* --lwt-tabs-border-color: transparent !important; */
 }
 
 #TabsToolbar {
   height: 36px !important;
   --toolbarbutton-inner-padding: calc((var(--tab-min-height) - 24px) / 2);
+}
+
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon:-moz-lwtheme, .tab-background[selected]:-moz-lwtheme {
+  outline: 0px solid !important;
 }
 
 .tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
@@ -44,6 +53,10 @@
   background-position: center bottom calc(3.5px + var(--tabs-navbar-shadow-size)) !important;
   background-size: 4px 4px;
   background-repeat: no-repeat;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: 0px !important;
 }
 
 /** Fix menu monster padding */
